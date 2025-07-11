@@ -1,4 +1,4 @@
-# elbuilder: PHP Version Manager
+# elbuilder: A PHP builder
 
 [![Release](https://img.shields.io/github/v/release/kemetic-labs/elbuilder)](https://img.shields.io/github/v/release/kemetic-labs/elbuilder)
 [![Build status](https://img.shields.io/github/actions/workflow/status/kemetic-labs/elbuilder/main.yml?branch=main)](https://github.com/kemetic-labs/elbuilder/actions/workflows/main.yml?query=branch%3Amain)
@@ -16,13 +16,14 @@ A simple cli tool to help build, and switch PHP versions on the fly, mainly to s
 
 - [x] **Core:** Build Flag Discovery (`--show-flags`)
 - [x] **CLI:** `elbuilder doctor` (Not in original RFC)
-- [x] **CLI:** `elbuilder setup` (shell integration)
-- [x] **CLI:** `elbuilder install <VERSION> <build_args>`
-- [x] **CLI:** `elbuilder releases`
+- [x] **CLI:** `elbuilder install <VERSION> -- <build_args>`
+- [x] **CLI:** `elbuilder setup` (shell integration - shims)
+- [x] **CLI:** `elbuilder versions`
 - [x] **CLI:** `elbuilder installed`
-- [ ] **CLI:** `elbuilder global <VERSION>`
 - [x] **CLI:** `elbuilder use <VERSION>`
+- [ ] **CLI:** `elbuilder default <VERSION>`
 - [ ] **CLI:** `elbuilder update`
+
 
 
 ## Getting Started
@@ -33,19 +34,19 @@ For detailed instructions on installing prerequisites and `elbuilder` itself, pl
 
 ### 2. Basic Usage
 
-Once installed, you can manage PHP versions with ease:
+Once installed, you can manage PHP versions as follows:
 
 ```sh
-# list available releases
-elbuilder releases
+# 1. list available versions
+elbuilder versions
 
-# install a PHP version (any git tag will work)
+# 2. install a PHP version (any git tag will work)
 elbuilder install 8.3.8
 
-# load in the current shell / switch to another installed version
+# 3. load in the current shell / switch to another installed version
 elbuilder use 8.3.8
 
-# verify
+# 4. verify
 php -v
 
 For more real-world usage examples, see:
