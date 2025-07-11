@@ -5,17 +5,17 @@
 [![codecov](https://codecov.io/gh/kemetic-labs/elbuilder/branch/main/graph/badge.svg)](https://codecov.io/gh/kemetic-labs/elbuilder)
 [![License](https://img.shields.io/github/license/kemetic-labs/elbuilder)](https://img.shields.io/github/license/kemetic-labs/elbuilder)
 
-A simple cli tool to help build, and switch PHP versions on the fly, mainly to simplify testing.
+A simple cli tool to help build, and switch between different PHP versions on the fly, mainly to simplify testing during extension development, but also can be a version manager.
 
 ## Features
-- Verify build dependencies (tested on OSx and linux) -> `elbuilder doctor`
-- Easily switch between php versions -> `elbuilder use <VERSION>`
+- Verify build dependencies (tested on OSx and linux)
+- Easily switch between php versions
 - Minimal dependencies.
 
 ## Roadmap
 
 - [x] **Core:** Build Flag Discovery (`--show-flags`)
-- [x] **CLI:** `elbuilder doctor` (Not in original RFC)
+- [x] **CLI:** `elbuilder doctor` 
 - [x] **CLI:** `elbuilder install <VERSION> -- <build_args>`
 - [x] **CLI:** `elbuilder setup` (shell integration - shims)
 - [x] **CLI:** `elbuilder versions`
