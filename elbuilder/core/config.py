@@ -20,10 +20,10 @@ class ElBuilderConfig(BaseSettings):
     @classmethod
     def make(cls, from_dir: Optional[Path] = None) -> "ElBuilderConfig":
         """Create an ElBuilderConfig instance with default directory structure.
-        
+
         Args:
             from_dir: Base directory (typically user's home directory)
-            
+
         Returns:
             ElBuilderConfig
         """
@@ -32,7 +32,7 @@ class ElBuilderConfig(BaseSettings):
         src_dir: Path = elbuilder_dir / "php-src"
         versions_dir: Path = elbuilder_dir / "versions"
         shims_dir: Path = elbuilder_dir / "shims"
-        
+
         return cls(
             home_dir=home,
             elbuilder_dir=elbuilder_dir,

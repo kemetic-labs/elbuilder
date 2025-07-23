@@ -23,7 +23,7 @@ def install_command(
         try:
             print("Running buildconf to generate configure script...")
             subprocess.run(["./buildconf", "--force"], cwd=src_dir, check=True)  # noqa: S603
-            
+
             out = subprocess.check_output(["./configure", "--help"], cwd=src_dir, text=True)  # noqa: S603
             print(out)
         except subprocess.CalledProcessError as e:

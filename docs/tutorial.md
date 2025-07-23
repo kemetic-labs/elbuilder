@@ -33,7 +33,7 @@ Run `elbuilder doctor` - should show all OK.
 
 elbuilder install 8.3.22
 
-  
+
 elbuilder install 8.4.8
 ```
 
@@ -73,4 +73,3 @@ php -v
 ```
 
 Done. Both versions installed, shims active, switch anytime with `elbuilder use X.Y.Z`.
-

@@ -1,3 +1,4 @@
+from pathlib import Path
 import multiprocessing
 import subprocess
 
@@ -37,7 +38,7 @@ class Installer:
                 if dst.exists():
                     dst.unlink()
                 dst.symlink_to(src)
-    def create_version_dir(self, install_dir) -> bool:
+    def create_version_dir(self, install_dir: Path) -> bool:
         if not install_dir.exists():
             try:
                 install_dir.mkdir(parents=True, exist_ok=True)

@@ -15,7 +15,7 @@ A simple cli tool to help build, and switch between different PHP versions on th
 ## Roadmap
 
 - [x] **Core:** Build Flag Discovery (`--show-flags`)
-- [x] **CLI:** `elbuilder doctor` 
+- [x] **CLI:** `elbuilder doctor`
 - [x] **CLI:** `elbuilder install <VERSION> -- <build_args>`
 - [x] **CLI:** `elbuilder setup` (shell integration - shims)
 - [x] **CLI:** `elbuilder versions`
@@ -54,5 +54,3 @@ For more real-world usage examples, see:
 - [Minimal PHP CLI](recipes/2_minimal_php_cli.md)
 - [PHP with Debug and ZTS](recipes/3_php_debug_zts.md)
 - [All Recipes](recipes/)
-
-

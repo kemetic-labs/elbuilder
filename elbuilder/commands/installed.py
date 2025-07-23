@@ -17,4 +17,4 @@ def installed_command(config: ElBuilderConfig | None = None) -> None:
     table.add_column("Path", style="green")
     for v in sorted(versions, reverse=True):
         table.add_row(v, str(versions_dir / v))
-    Console().print(table) 
+    Console().print(table)

@@ -11,17 +11,17 @@ PHP Source Builder
 
 ```bash
 pipx install elbuilder
-elbuilder doctor          
-elbuilder versions        
-elbuilder install 8.3.22  
-elbuilder setup           
-elbuilder use 8.3.22      
+elbuilder doctor
+elbuilder versions
+elbuilder install 8.3.22
+elbuilder setup
+elbuilder use 8.3.22
 ```
 
 ## Commands
 
 - `elbuilder doctor` - Verify build dependencies
-- `elbuilder versions` - List available PHP versions  
+- `elbuilder versions` - List available PHP versions
 - `elbuilder install <version>` - Build and install PHP version
 - `elbuilder installed` - List installed versions
 - `elbuilder use <version>` - Switch active PHP version

@@ -19,7 +19,7 @@ class SourceManager:
             print(f"Cloning PHP source to {self.config.src_dir}")
             self.config.src_dir.parent.mkdir(parents=True, exist_ok=True)
             self.run_cmd([
-                "git", "clone", "https://github.com/php/php-src.git", 
+                "git", "clone", "https://github.com/php/php-src.git",
                 str(self.config.src_dir)
             ], check=True)
         else:
@@ -44,7 +44,7 @@ class SourceManager:
 
     def checkout(self, tag: str) -> None:
         """Checkout a specific git tag.
-        
+
         Args:
             tag: Version tag (e.g., '8.3.22'). Will be prefixed with 'php-' if not already.
         """
