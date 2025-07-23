@@ -1,0 +1,52 @@
+site_name: elbuilder
+repo_url: https://github.com/kemetic-labs/elbuilder
+site_url: https://kemetic-labs.github.io/elbuilder
+site_description: PHP Source Builder
+site_author: Kemetic Labs Tean
+edit_uri: edit/main/docs/
+repo_name: kemetic-labs/elbuilder
+copyright: Maintained by <a href="https://labs.kemetic.io">kemetic-labs</a>.
+
+nav:
+  - Home: index.md
+  - Tutorial: tutorial.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["elbuilder"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kemetic-labs/elbuilder
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/elbuilder
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
