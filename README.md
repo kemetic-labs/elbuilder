@@ -21,6 +21,7 @@ A simple cli tool to help build, and switch between different PHP versions on th
 - [x] **CLI:** `elbuilder versions`
 - [x] **CLI:** `elbuilder installed`
 - [x] **CLI:** `elbuilder use <VERSION>`
+- [x] **CLI:** build tags — `install <VERSION>+<tag>...`
 - [ ] **CLI:** `elbuilder default <VERSION>`
 - [ ] **CLI:** `elbuilder update`
 
@@ -48,6 +49,23 @@ elbuilder use 8.3.8
 
 # 4. verify
 php -v
+```
+
+### 3. Build tags
+
+Install the same version multiple ways with `+tags`; raw `./configure` args still go after `--`:
+
+```sh
+# ZTS + debug
+elbuilder install 8.3.22+zts+debug -- disable-all enable-cli with-libxml with-curl
+
+# ASAN (sets USE_ZEND_ALLOC=0 / ASAN_OPTIONS automatically on `use`)
+elbuilder install 8.3.22+asan -- disable-all enable-cli with-libxml with-curl
+eval "$(elbuilder use 8.3.22+asan)"
+```
+
+Tags: threading `+nts`/`+zts`, optim `+release`/`+debug`, sanitizer `+none`/`+asan`/`+ubsan`.
+Defaults (`nts`/`release`/`none`) are implied, so `8.3.22+asan` == `8.3.22+nts+asan`.
 
 For more real-world usage examples, see:
 - [Simple PHP Setup](recipes/1_simple_setup.md)
